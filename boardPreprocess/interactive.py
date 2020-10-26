@@ -3,7 +3,8 @@ import matplotlib.pyplot as plt
 import cv2 
 
 ### =================== DETECTING COLOR (or Thresholding the image)
-IMAGE_NAME = "testStand_small.png"
+#IMAGE_NAME = "testStand_small.png"
+IMAGE_NAME = "pieces/0_0.png"
 
 def nothing(x):
     pass

@@ -3,15 +3,19 @@ import matplotlib.pyplot as plt
 import cv2 
 
 ### Constants
-IMAGE_NAME = "movedE.png"
+IMAGE_NAME = "board4.png"
 
 LOW_HUE, LOW_SAT, LOW_VAL = 91, 0, 0
 UPPER_HUE, UPPER_SAT, UPPER_VAL = 180, 255, 255
 LOW_HSV = [LOW_HUE, LOW_SAT, LOW_VAL]
 UPPER_HSV = [UPPER_HUE, UPPER_SAT, UPPER_VAL]
 
-OUTPUT_HEIGHT, OUTPUT_WIDTH = 500, 450
+from os.path import exists
+from os import mkdir
 OUTPUT_PATH = "./output/"
+if not exists(OUTPUT_PATH): mkdir(OUTPUT_PATH)
+
+OUTPUT_HEIGHT, OUTPUT_WIDTH = 3*500, 3*450
 
 ### program starts
 image = cv2.imread(IMAGE_NAME)
@@ -59,21 +63,22 @@ imageBorder = np.float32([[OUTPUT_WIDTH, OUTPUT_HEIGHT], [OUTPUT_WIDTH, 0], [0, 
 ## Test if we got the coords correctly
 #print(boardBorder)
 #print(imageBorder)
-hl_image = image.copy()
-for p in boardBorder:
-    cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 0, 255), 2) # tuple(list(map(.. because implicit int conversion is deprecated
-for p in imageBorder:
-    cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 255, 255), 2)
-cv2.imshow("corners hightlight", hl_image)
+#hl_image = image.copy()
+#for p in boardBorder:
+#    cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 0, 255), 2) # tuple(list(map(.. because implicit int conversion is deprecated
+#for p in imageBorder:
+#    cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 255, 255), 2)
+#cv2.imshow("corners hightlight", hl_image)
 
 # do warping transform so we have top-down view of the board
 M = cv2.getPerspectiveTransform(boardBorder, imageBorder)
 warped = cv2.warpPerspective(image, M, (OUTPUT_WIDTH, OUTPUT_HEIGHT))
 
 # crop the images to 90 small pieces
-cv2.imshow("warped", warped)
+#cv2.imshow("warped", warped)
+#cv2.waitKey(0)
+
 cv2.imwrite(OUTPUT_PATH + "/warped.png", warped) # ./output folder should exists before the execution of this line
-cv2.waitKey(0)
 
 assert(OUTPUT_HEIGHT//10*9 == OUTPUT_WIDTH) # output height and width should follow ratio 10:9
 margin = OUTPUT_HEIGHT//10 # each piece belongs in a square of (OUTPUT_HEIGHT/10) x (OUTPUT_WIDTH/9)
