@@ -1,12 +1,23 @@
+cv2 Trackbar to threshold images
+https://www.youtube.com/watch?v=43pCXboZ5hE
+https://www.youtube.com/watch?v=AMFhjir4WgQ&t=1597s
+
 cv2 Contours
 https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
 
 cv2 bitwise_not
 https://stackoverflow.com/questions/19580102/inverting-image-in-python-with-opencv
 
+cv2 fit a quadrilateral to a blob
 https://stackoverflow.com/questions/41138000/fit-quadrilateral-tetragon-to-a-blob
 
-https://stackoverflow.com/questions/54164630/want-to-find-contours-valueerror-not-enough-values-to-unpack-expected-3-go
+cv2: do contours have consistent orientation
+https://stackoverflow.com/questions/45323590/do-contours-returned-by-cvfindcontours-have-a-consistent-orientation
 
-https://www.youtube.com/watch?v=43pCXboZ5hE
-https://www.youtube.com/watch?v=AMFhjir4WgQ&t=1597s
+cv2: contours' feature
+https://docs.opencv.org/master/dd/d49/tutorial_py_contour_features.html
+
+cv2: geometric transformation
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
+https://stackoverflow.com/questions/33883505/find-4-specific-corner-pixels-and-use-them-with-warp-perspective
+
