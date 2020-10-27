@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import cv2 
 
 ### Constants
-IMAGE_NAME = "board4.png"
+IMAGE_NAME = "board2.png"
 
 LOW_HUE, LOW_SAT, LOW_VAL = 91, 0, 0
 UPPER_HUE, UPPER_SAT, UPPER_VAL = 180, 255, 255
@@ -61,22 +61,22 @@ boardBorder = np.float32([p[0] for p in boardContour])
 imageBorder = np.float32([[OUTPUT_WIDTH, OUTPUT_HEIGHT], [OUTPUT_WIDTH, 0], [0, 0], [0, OUTPUT_HEIGHT]])
 
 ## Test if we got the coords correctly
-#print(boardBorder)
-#print(imageBorder)
-#hl_image = image.copy()
-#for p in boardBorder:
-#    cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 0, 255), 2) # tuple(list(map(.. because implicit int conversion is deprecated
-#for p in imageBorder:
-#    cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 255, 255), 2)
-#cv2.imshow("corners hightlight", hl_image)
+print(boardBorder)
+print(imageBorder)
+hl_image = image.copy()
+for p in boardBorder:
+   cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 0, 255), 2) # tuple(list(map(.. because implicit int conversion is deprecated
+for p in imageBorder:
+   cv2.circle(hl_image, tuple(list(map(int, p[:]))), 5, (0, 255, 255), 2)
+cv2.imshow("corners hightlight", hl_image)
 
 # do warping transform so we have top-down view of the board
 M = cv2.getPerspectiveTransform(boardBorder, imageBorder)
 warped = cv2.warpPerspective(image, M, (OUTPUT_WIDTH, OUTPUT_HEIGHT))
 
-# crop the images to 90 small pieces
-#cv2.imshow("warped", warped)
-#cv2.waitKey(0)
+##crop the images to 90 small pieces
+cv2.imshow("warped", warped)
+cv2.waitKey(0)
 
 cv2.imwrite(OUTPUT_PATH + "/warped.png", warped) # ./output folder should exists before the execution of this line
 
@@ -86,8 +86,8 @@ margin = OUTPUT_HEIGHT//10 # each piece belongs in a square of (OUTPUT_HEIGHT/10
 for th in range(0, OUTPUT_HEIGHT, margin):
     for tw in range(0, OUTPUT_WIDTH, margin):
         piece = warped[th:th+margin, tw:tw+margin].copy()
-        #cv2.imshow("piece", piece)
-        #cv2.waitKey(0)
+        # cv2.imshow("piece", piece)
+        # cv2.waitKey(0)
         name = str(th//margin) + "_" + str(tw//margin) + ".png"
         cv2.imwrite(OUTPUT_PATH + name, piece)
 

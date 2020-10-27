@@ -1,8 +1,13 @@
+cv2: drawing functions
+https://docs.opencv.org/master/dc/da5/tutorial_py_drawing_functions.html
+
 cv2 Trackbar to threshold images
 https://www.youtube.com/watch?v=43pCXboZ5hE
 https://www.youtube.com/watch?v=AMFhjir4WgQ&t=1597s
 
-cv2 Contours
+cv2: contours' feature
+https://docs.opencv.org/master/dd/d49/tutorial_py_contour_features.html
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_contours/py_contour_properties/py_contour_properties.html
 https://docs.opencv.org/3.4/d4/d73/tutorial_py_contours_begin.html
 
 cv2 bitwise_not
@@ -14,10 +19,30 @@ https://stackoverflow.com/questions/41138000/fit-quadrilateral-tetragon-to-a-blo
 cv2: do contours have consistent orientation
 https://stackoverflow.com/questions/45323590/do-contours-returned-by-cvfindcontours-have-a-consistent-orientation
 
-cv2: contours' feature
-https://docs.opencv.org/master/dd/d49/tutorial_py_contour_features.html
-
 cv2: geometric transformation
 https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_geometric_transformations/py_geometric_transformations.html
 https://stackoverflow.com/questions/33883505/find-4-specific-corner-pixels-and-use-them-with-warp-perspective
 
+cv2: Image thresholding
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_thresholding/py_thresholding.html
+
+cv2: Canny
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_canny/py_canny.html
+
+cv2: morpho transformation
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_morphological_ops/py_morphological_ops.html
+
+stackoverflow: detect semicircle
+https://stackoverflow.com/questions/20698613/detect-semicircle-in-opencv
+
+cv2: hough circle
+https://opencv-python-tutroals.readthedocs.io/en/latest/py_tutorials/py_imgproc/py_houghcircles/py_houghcircles.html
+
+stackoverflow: thresholding adaptively advices
+https://stackoverflow.com/questions/60110313/opencv-thresholding-adaptive-to-different-lightning-conditions
+
+cv2: Feature detection
+https://docs.opencv.org/master/dd/d1a/group__imgproc__feature.html#ga47849c3be0d0406ad3ca45db65a25d2d
+
+cv2: image denoise, local means
+https://docs.opencv.org/3.4/d5/d69/tutorial_py_non_local_means.html

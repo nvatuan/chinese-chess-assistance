@@ -4,7 +4,7 @@ import cv2
 
 ### =================== DETECTING COLOR (or Thresholding the image)
 #IMAGE_NAME = "testStand_small.png"
-IMAGE_NAME = "pieces/0_0.png"
+IMAGE_NAME = "board2_small.png"
 
 def nothing(x):
     pass
@@ -52,8 +52,8 @@ while True:
 #cv2.imshow('mask dilated', dilated)
 
 contours, _ = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-#tmp = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-#cv2.drawContours(image, contours, 0, (0, 255, 0), 3)
+tmp = cv2.findContours(mask, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+cv2.drawContours(image, contours, 0, (0, 255, 0), 3)
 
 
 # contours is a list of contour detected in the image
@@ -73,10 +73,10 @@ for i, cnt in enumerate(contours):
 
     ### Fit bounding rectangle
     ### Doesn't work: It tries to fit every thing to a rectangle, ie. doesn't trim.
-    #rect = cv2.minAreaRect(cnt)
-    #box = cv2.boxPoints(rect)
-    #box = np.int0(box)
-    #cv2.drawContours(tmpImage,[box], 0, (0, 0, 255), 2)
+    rect = cv2.minAreaRect(cnt)
+    box = cv2.boxPoints(rect)
+    box = np.int0(box)
+    cv2.drawContours(tmpImage,[box], 0, (0, 0, 255), 2)
 
     ### highlights the approx contour corners as blue dots
     for ap in approx:

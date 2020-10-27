@@ -55,7 +55,7 @@ def fitCircle(IMAGE_NAME, debug=False):
     return return_val
 
 PREFIX = "./pieces"
-DIRS = ["/set1", "/set2", "/set3", "/set4", "/set5", "/set6", "/set7"]
+DIRS = ["/set12"]
 
 def testFitCircle():    
     from os import listdir
@@ -76,7 +76,7 @@ def testFitCircle():
                 total += 1
                 fwp = path + f
                 #print('Testing [', fwp, ']')
-                if not (fitCircle(fwp) is None): found += 1
+                if not (fitCircle(fwp, True) is None): found += 1
                 else: fail.append(fwp)
 
         print("Detected ", found, "/", total)
