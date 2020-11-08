@@ -1,0 +1,178 @@
+* {
+	font-family: 'Open Sans', sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+.name p:nth-child(2) {
+    color: #575757d1;
+    font-family:  'roboto', sans-serif;
+    font-weight: 400;
+    margin-top: 5px;
+    letter-spacing: 0.6px;
+}
+
+body {background-color: #f9f9f9; margin:0; padding:0;}
+
+.avatarBox img {
+	box-shadow: 0px 0px 4px 1px #373141ab;
+}
+
+.menu h3 {
+	color: #76cc9c;
+}
+
+.name {
+	cursor: default;
+}
+
+.name .s {
+	text-shadow: 0.6px 0.6px 2px #3cb3716e;
+}
+
+.name p:first-child {
+	font-weight: 700;
+	color: #585858;
+	font-size: 24pt;
+	padding-bottom: 0px;
+	margin-bottom:  0px;
+	line-height: 1;
+	margin-top: 6px;
+	transition: 0.4s;
+	box-sizing: border-box;
+	padding-bottom: 5px;
+	padding-right: 10px;
+	display: inline-block;
+	position: relative;
+}
+
+.name p:first-child:after {
+	content: '';
+	top: 0;
+	position: absolute;
+	height: 100%;
+	width: 4px;
+	background-color: orange;
+	transition: 0.2s;
+	margin-left: 10px;
+	transform-origin: 50% 50%;
+	transform: scaleY(0);
+}
+
+.name p:first-child:hover:after {
+	transform: scaleY(1);
+}
+
+.name p:first-child span {
+	font-weight: 300;
+}
+
+.s {
+	display: inline-block;
+	margin: 0 0 0 12px;
+	transform: scaleX(0);
+	transform-origin: 0% 50%;
+	transition: 0.3s;
+}
+
+.s span {
+	font-size: 18px;
+}
+
+.name p:nth-child(3) {
+	text-shadow: 0.2px 0.2px 0.4px #44227bd1;
+}
+
+.name p:nth-child(3) span{
+	font-size: 18px;
+	margin-right: 4px;
+}
+
+.menu h3 span {
+	color: #e4664f;
+}
+
+.menu {
+	background-color: #f3f3f3;
+	width: 100%;
+	top: 0;
+	position: fixed;
+	z-index: 100;
+	box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.2);
+}
+
+.boldd {
+	font-weight: 600;
+	color: #5a5a5af2;
+}
+
+.menuMore {
+	
+}
+
+.b {
+	text-shadow: 0px 0px 0.2px #44227bd1;
+	font-size: 12pt;
+}
+
+.profile {
+	background-color: white;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.sayHi {
+	background-color: #f16a52;
+	display: inline-block;
+	font-weight: 600;
+	letter-spacing: 0.6px;
+	padding: 5px 7px;
+	line-height: 1.3;
+	font-size: 17px;
+	text-transform:  uppercase;
+	color: #fff;
+	border-radius: 2px;
+	position: relative;
+}
+
+.sayHi:after {
+	content: '';
+	width: 0;
+	height: 0;
+	top:  100%;
+	left: 10px;
+	display: block;
+	position: absolute;
+	border-style: solid;
+	border-width: 0 0 8px 8px;
+	border-left-color: #f16a52;
+}
+
+.social span {
+	color: #f1eeee;
+	display: inline-block;
+	font-size: 24px;
+	margin-bottom: 14px;
+	line-height: 1.1;
+	transition: 0.4s;
+}
+
+.social span:hover {
+	color: #373737;
+}
+
+.social span {
+	padding-top: 16px;
+	list-style-type: none;
+}
+
+.detailInfo {
+	color: #373737;
+}
+
+.license a {
+	font-size: 13px;
+	color: #6fb9a475;
+}
+
