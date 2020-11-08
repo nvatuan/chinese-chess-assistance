@@ -2,10 +2,10 @@ import numpy as np
 import matplotlib.pyplot as plt 
 import cv2 
 
-### =================== DETECTING COLOR (or Thresholding the image)
 #IMAGE_NAME = "testStand_small.png"
 IMAGE_NAME = "board2_small.png"
 
+### =================== DETECTING COLOR (or Thresholding the image)
 def nothing(x):
     pass
 
