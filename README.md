@@ -1,28 +1,27 @@
-# Xiangpi AI with board recognition via Raspberry Camera Module
+# Chinese chess assistance
 
 ## About the Project
-Đây là một dự án 4-người, với chủ đề "Hệ thống Thông minh" (Smart System) với các yêu cầu như sau:
-1. Có ứng dụng Trí tuệ Nhân tạo, đưa ra gợi ý, quyết định,..
+Đây là một đồ án "Hệ thống Thông minh" (Smart System) với các yêu cầu như sau:
+1. Có ứng dụng Trí tuệ Nhân tạo
 2. Có lập trình nhúng
-3. Có liên kết giữa nhiều thiết bị (network)
-4. ...
+3. Có liên kết giữa nhiều thiết bị (IoT, network,..)
+Với mục đích hỗ trợ con người đưa ra quyết định.
 
-## Mô tả
-Project của chúng tôi bao gồm:
-1. Một server chứa các model AI đã train, với các API mà thông qua đó có thể request hỗ trợ từ AI. (tôi sẽ gọi nó là Main Server)
-2. Một Raspberry Pi có kết nối với Main Server, có module camera chụp top-down bàn cờ tướng, xử lý hình ảnh này và gửi về Main Server. Sau đó Main Server sẽ gửi những thông tin cần thiết về Raspberry. Raspberry còn là một webserver, là một access point, mọi thiết bị connect vào có thể xem các thông tin thêm về ván cờ đang diễn ra.
+## Tóm tắt
+### Yêu cầu
+"Cung cấp hình ảnh chứa một bàn cờ tướng, hãy đề xuất những nước đi tốt."
 
-## Các chức năng hiện tại:
-1. Cho trạng thái bàn cờ hiện tại, đề xuất nước đi tốt nhất.
-2. Nhận diện được chính xác trạng thái bàn cờ từ ảnh chụp top-down (điều kiện môi trường tự quyết)
-3. Khả năng render một bàn cờ ảo theo yêu cầu
-4. Raspberry là một access point và có Webserver tại đó.
-5. Main Server có kết nối với Raspberry, có API cho các AI của nó để Rasp yêu cầu.
+Dựa vào mô tả như trên, Project của chúng tôi có thể được tóm gọn bằng hai mô hình:
+1. Máy tính hiểu được bàn cờ (sử dụng computer vision và một model tensorflow nhận diện)
+2. Máy tính đề xuất nước đi. (sử dụng một [engine cờ tướng](https://github.com/bupticybee/elephantfish) làm backend)
 
-## Progress
-Project được chia ra làm 4 phần lớn:
-1. AI - Play
-2. AI - Recognition
-3. IP - Render board
-4. WS - Raspberry Pi Webserver
-5. MS - Main Server connections
+## Bước giải quyết
+1. Tiền xử lý:
+Từ một hình ảnh có chứa bàn cờ, trích ra được 90 vị trí của nó.
+2. Nhận diện:
+Sử dụng một model nhận diện (tự tạo, tự train) để dự đoán vị trí của bàn cờ là quân gì.
+3. Đề xuất:
+Có được trạng thái bàn cờ, gọi đến engine cờ để lấy đề xuất.
+
+Ngoài ra, hệ thống của chúng tôi còn có một webserver để broadcast thông tin của ván cờ hiện tại cho mọi thiết bị kết nối đến.
+
