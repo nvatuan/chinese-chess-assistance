@@ -25,3 +25,4 @@ Có được trạng thái bàn cờ, gọi đến engine cờ để lấy đề
 
 Ngoài ra, hệ thống của chúng tôi còn có một webserver để broadcast thông tin của ván cờ hiện tại cho mọi thiết bị kết nối đến.
 
+I have updated the repo with our report materials, please check them for more information: [Here](https://github.com/nvatuan/chinese-chess-assistance/tree/master/report)
