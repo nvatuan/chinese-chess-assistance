@@ -1,3 +1,3 @@
 # Board Rendering
-Đây là nhánh chịu trách nhiệm tạo ra một file ảnh là bàn cờ từ file text mô tả từng vị trí của bàn cờ.
-Chi tiết tại [đây](boardRendering/task/BoardRendering.pdf)
+This is the branch that is responsible for drawing an image of a chess board given a string that describe the board.
+Specific requirement is [here](BoardRendering/task/BoardRendering.pdf) (Vietnamese)
