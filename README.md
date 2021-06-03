@@ -12,7 +12,6 @@ With the purpose of assisting human making decisions.
 "Provided a picture frame that contains a game of Chinese chess, please suggest the next best moves for the two players."
 
 ### General solution
-Dựa vào mô tả như trên, Project của chúng tôi có thể được tóm gọn bằng hai mô hình:
 Based on the above problem, the project's solution consists of 2 following models:
 1. The computer understands the board (using Computer vision with a Tensorflow Classifier model)
 2. The computer suggests chess moves (using a [chinese chess engine](https://github.com/bupticybee/elephantfish) as backend with some modifications)
