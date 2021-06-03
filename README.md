@@ -1,12 +1,8 @@
-# Xiangpi AI with board recognition via Raspberry Camera Module
+# dev-boardPreprocess
+This is the branch that is responsible for normalizing and extracting 90 positions (9 columns, 10 rows) of the chess board.
 
-## dev-boardPreprocess
-Đây là nhánh chịu trách nhiệm chuẩn hóa một bức ảnh chứa bàn cờ và crop ra được 90 vị trí của bàn cờ.
+## Warp into a rectangle
+The board is a rectangle but because of the camera angle it might be warped. This step will re-warp the board into a straight rectangle.
 
-### Chuẩn hóa một bức ảnh chứa bàn cờ
-Bàn cờ là một hình chữ nhật, nhưng có thể vì góc chụp mà nó thành một hình bình hành.
-Bước này sẽ tìm ra được 4 góc của bàn cờ, sau đó warp khu vực bàn cờ thành một hình chữ nhật như là đang nhìn từ top-down.
-
-### Crop ra 90 vị trí của bàn cờ
-Sau khi có được bức view top-down, ta sẽ crop hình đó thành 90 bức ảnh nhỏ, tương ứng với 90 vị trí trên bàn cờ.
-Sau đó 90 bức ảnh đó sẽ được chuyển sang cho `dev-pieceRecognition`
+## Crop into 90 positions
+After acquiring a top-down view of the board, the board will be cropped into 90 small images, corresponding to 90 positions on the table.
