@@ -1,28 +1,24 @@
 # Chinese chess assistance
 
 ## About the Project
-Đây là một đồ án "Hệ thống Thông minh" (Smart System) với các yêu cầu như sau:
-1. Có ứng dụng Trí tuệ Nhân tạo
-2. Có lập trình nhúng
-3. Có liên kết giữa nhiều thiết bị (IoT, network,..)
-Với mục đích hỗ trợ con người đưa ra quyết định.
+This is a Smart System project with the following requirements:
+1. Apply Artificial Intelligence
+2. Apply Embedded programming
+3. Apply Internet of Things
+With the purpose of assisting human making decisions.
 
-## Tóm tắt
-### Yêu cầu
-"Cung cấp hình ảnh chứa một bàn cờ tướng, hãy đề xuất những nước đi tốt."
+## Summary
+### The problem
+"Provided a picture frame that contains a game of Chinese chess, please suggest the next best moves for the two players."
 
+### General solution
 Dựa vào mô tả như trên, Project của chúng tôi có thể được tóm gọn bằng hai mô hình:
-1. Máy tính hiểu được bàn cờ (sử dụng computer vision và một model tensorflow nhận diện)
-2. Máy tính đề xuất nước đi. (sử dụng một [engine cờ tướng](https://github.com/bupticybee/elephantfish) làm backend)
+Based on the above problem, the project's solution consists of 2 following models:
+1. The computer understands the board (using Computer vision with a Tensorflow Classifier model)
+2. The computer suggests chess moves (using a [chinese chess engine](https://github.com/bupticybee/elephantfish) as backend with some modifications)
 
-## Bước giải quyết
-1. Tiền xử lý:
-Từ một hình ảnh có chứa bàn cờ, trích ra được 90 vị trí của nó.
-2. Nhận diện:
-Sử dụng một model nhận diện (tự tạo, tự train) để dự đoán vị trí của bàn cờ là quân gì.
-3. Đề xuất:
-Có được trạng thái bàn cờ, gọi đến engine cờ để lấy đề xuất.
+## Deployment
+Our project were deployed on a Raspberry Pi 3B. This device also has a small webserver that is used to deliver/broadcast the current chess game to other devices that connect to the server. For more information, please check on our report [here](https://github.com/nvatuan/chinese-chess-assistance/tree/master/report) (Vietnamese and English).
 
-Ngoài ra, hệ thống của chúng tôi còn có một webserver để broadcast thông tin của ván cờ hiện tại cho mọi thiết bị kết nối đến.
-
-I have updated the repo with our report materials, please check them for more information: [Here](https://github.com/nvatuan/chinese-chess-assistance/tree/master/report)
+## Demonstrations
+We did a small video to demonstate our project/system [here](https://youtu.be/O_xAv5Q_S-0).
