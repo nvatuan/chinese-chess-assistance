@@ -56,7 +56,11 @@ Lastly, we pass the board to the engine to retrieve the suggestions.
 </div>
 
 ## Deployment
-Our project were deployed on a Raspberry Pi 3B. This device also has a small webserver that is used to deliver/broadcast the current chess game to other devices that connect to the server. For more information, please check on our report [here](https://github.com/nvatuan/chinese-chess-assistance/tree/master/report) (Vietnamese and English).
+Our project were deployed on a Raspberry Pi 3B. This device also has a small webserver that is used to deliver/broadcast the current chess game to other devices that connect to the server. If you are wondering how the system runs, please take a look into `threaded_webserver.py`.
 
-## Demonstrations
-We did a small video to demonstate our project/system [here](https://youtu.be/O_xAv5Q_S-0).
+## Links
+* We did a small video to demonstate our project/system [here](https://youtu.be/O_xAv5Q_S-0).
+* For more on preprocessing, checkout [dev-boardPreprocess](https://github.com/nvatuan/chinese-chess-assistance/tree/dev-boardPreprocess) branch
+* For more on piece recognition, checkout [dev-pieceRecognition](https://github.com/nvatuan/chinese-chess-assistance/tree/dev-pieceRecognition) branch
+* Please check out our report [here](https://github.com/nvatuan/chinese-chess-assistance/tree/master/report) (Vietnamese and English) if you are interested.
+* The Chinese Chess Engine that made it possible [elephantfish.py](https://github.com/bupticybee/elephantfish). Please go and give them a star!
